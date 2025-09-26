@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Monthly Budget Expenses">
+        <div class="slds-p-around_medium">
+            <lightning-combobox name="budgetSelect" label="Select Budget" value={selectedBudgetId}
+                options={budgetOptions} onchange={handleBudgetChange}>
+            </lightning-combobox>
+        </div>
+
+        <div class="slds-p-around_medium" style="height:400px">
+            <canvas lwc:dom="manual"></canvas>
+        </div>
+    </lightning-card>
+</template>

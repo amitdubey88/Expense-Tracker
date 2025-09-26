@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Expense_Not_More_Than_Remaining_Budget</fullName>
+    <active>true</active>
+    <description>Expense should not be more than remaining budget</description>
+    <errorConditionFormula>Monthly_Budget__r.Remaining_Budget__c &lt;  Amount__c</errorConditionFormula>
+    <errorMessage>There is a budget issue, you cannot use money greater than the remaining budget,</errorMessage>
+</ValidationRule>

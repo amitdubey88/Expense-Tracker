@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Description_Required_Above_5000</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(Amount__c &gt; 5000, ISBLANK(Description__c))</errorConditionFormula>
+    <errorDisplayField>Description__c</errorDisplayField>
+    <errorMessage>Description is required for expenses above ₹5,000</errorMessage>
+</ValidationRule>

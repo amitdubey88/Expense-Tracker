@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Monthly Budget Form" icon-name="standard:budget">
+        <div class="slds-m-around_medium">
+            <lightning-record-edit-form object-api-name="Monthly_Budget__c" onsuccess={handleSuccess}
+                onerror={handleError}>
+                <lightning-messages></lightning-messages>
+                <lightning-input-field field-name="Month_Year__c"></lightning-input-field>
+                <lightning-input-field field-name="Actual_Spent__c"></lightning-input-field>
+                <lightning-input-field field-name="Budgeted_Amount__c"></lightning-input-field>
+                <lightning-input-field field-name="Remaining_Budget__c"></lightning-input-field>
+                <lightning-input-field field-name="Category__c"></lightning-input-field>
+                <div class="slds-m-top_medium flex-buttons">
+                    <lightning-button class="slds-m-top_small" variant="brand" type="submit" name="save" label="Save">
+                    </lightning-button>
+                    <lightning-button class="slds-m-top_small" variant="neutral" name="clear" label="Clear"
+                        onclick={handleClear}>
+                    </lightning-button>
+                </div>
+            </lightning-record-edit-form>
+        </div>
+    </lightning-card>
+</template>
